@@ -1,0 +1,53 @@
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    font-weight: 100;
+}
+h2{
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+#artworks{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+.artwork {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
