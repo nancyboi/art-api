@@ -1,7 +1,8 @@
 body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #192836;
+    color: white;
     margin: 0;
     padding: 20px;
 }
@@ -21,12 +22,17 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 18px;
 }
+@media (max-width: 650px){
+    #artworks{
+        grid-template-columns: 1fr;
+    }
+}
 .artwork {
-    background: #fff;
+    background: #1e2d3b;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 10px -2px rgb(0 0 0 / 51%), -2px -2px 10px -3px #ffffff3d;
 }
 img {
     max-width: 100%;
