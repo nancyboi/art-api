@@ -24,11 +24,17 @@ async function fetchArtworks(page = 1) {
 
         // Populate artwork information including title, image, artist, date, and description
         artworkElement.innerHTML = `
-            <h2>${artwork.title}</h2>
-            ${artwork.image_id ? `<img src="https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg" alt="${artwork.title}">` : ''}
-            <p><strong>Artist:</strong> ${artwork.artist_title || 'Unknown'}</p>
-            <p>${artwork.date_display}</p>
-            ${artwork.thumbnail && artwork.thumbnail.alt_text ? `<p>${artwork.thumbnail.alt_text}</p>` : '<p>No description available.</p>'}
+            <div class="front">
+                <h2>${artwork.title}</h2>
+                ${artwork.image_id ? `<img src="https://www.artic.edu/iiif/2/${artwork.image_id}/full/!843,843/0/default.jpg" alt="${artwork.title}">` : ''}
+                <p><strong>Artist:</strong> ${artwork.artist_title || 'Unknown'}</p>
+                <p>${artwork.date_display}</p>
+                ${artwork.thumbnail && artwork.thumbnail.alt_text ? `<p>${artwork.thumbnail.alt_text}</p>` : '<p>No description available.</p>'}
+            </div>
+            <div class="back">
+                <h2>${artwork.title}</h2>
+                ${artwork.image_id ? `<img src="https://www.artic.edu/iiif/2/${artwork.image_id}/full/!843,843/0/default.jpg" alt="${artwork.title}">` : ''}
+            </div>
         `;
 
         // Append the created artwork element to the container
